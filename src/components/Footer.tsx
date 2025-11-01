@@ -20,17 +20,6 @@ const Footer = () => {
               <li>SmartNews</li>
             </ul>
           </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-primary-foreground/80">
-              <li>About Us</li>
-              <li>Contact</li>
-              <li>Support</li>
-              <li>Privacy Policy</li>
-            </ul>
-          </div>
-        </div>
         
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
           <p>&copy; 2025 FabAccounts. All rights reserved.</p>
