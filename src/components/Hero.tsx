@@ -2,6 +2,10 @@ import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
 
 const Hero = () => {
+  const handleRequestClick = () => {
+    window.open("https://forms.gle/vUEKh8VoK7uCW5Uh9", "_blank");
+  };
+
   return (
     <section className="pt-32 pb-20 gradient-hero">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,13 +20,16 @@ const Hero = () => {
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Access verified and managed ad accounts across TikTok, NewsBreak, Bigo, Google, and SmartNews — with full support and guidance.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
                 className="gradient-accent text-accent-foreground border-0 shadow-glow hover:scale-105 transition-smooth text-lg px-8"
+                onClick={handleRequestClick}
               >
                 Request Accounts
               </Button>
+
               <Button 
                 size="lg" 
                 variant="outline" 
