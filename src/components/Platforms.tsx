@@ -1,15 +1,19 @@
+import Image from "next/image";
+
 const platforms = [
-  { name: "NewsBreak", color: "from-red-500 to-red-600" },
-  { name: "TikTok", color: "from-black to-cyan-500" },
-  { name: "Bigo", color: "from-blue-500 to-purple-500" },
-  { name: "Google", color: "from-blue-500 to-green-500" },
-  { name: "SmartNews", color: "from-orange-500 to-red-500" }
+  { name: "NewsBreak", logo: "/assets/newsbreak.png", color: "from-red-500 to-red-600" },
+  { name: "TikTok", logo: "/assets/tik-tok.png", color: "from-black to-cyan-500" },
+  { name: "Bigo", logo: "/assets/bigo.png", color: "from-blue-500 to-purple-500" },
+  { name: "Google", logo: "/assets/google.png", color: "from-blue-500 to-green-500" },
+  { name: "Meta", logo: "/assets/meta.png", color: "from-orange-500 to-red-500" },
 ];
 
 const Platforms = () => {
   return (
     <section id="platforms" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Heading */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
             Platforms We Cover
@@ -18,19 +22,27 @@ const Platforms = () => {
             Access to the top-performing advertising platforms
           </p>
         </div>
-        
+
+        {/* Platform Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           {platforms.map((platform, index) => (
-            <div 
-              key={index}
+            <div
+              key={platform.name}
               className="bg-card rounded-xl p-8 shadow-soft hover:shadow-medium transition-smooth animate-fade-in flex items-center justify-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-center">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${platform.color} mb-4`}>
-                  <span className="text-2xl font-bold text-white">
-                    {platform.name.charAt(0)}
-                  </span>
+                {/* Gradient Circle */}
+                <div
+                  className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${platform.color} mb-4`}
+                >
+                  <Image
+                    src={platform.logo}
+                    alt={platform.name}
+                    width={36}
+                    height={36}
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">
                   {platform.name}
