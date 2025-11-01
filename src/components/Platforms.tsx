@@ -1,9 +1,9 @@
 const platforms = [
-  { name: "NewsBreak", logo: "/assets/newsbreak.svg", color: "from-red-500 to-red-600" },
-  { name: "TikTok", logo: "/assets/tiktok.svg", color: "from-black to-cyan-500" },
-  { name: "Bigo", logo: "/assets/bigo.svg", color: "from-blue-500 to-purple-500" },
-  { name: "Google", logo: "/assets/google.svg", color: "from-blue-500 to-green-500" },
-  { name: "SmartNews", logo: "/assets/smartnews.svg", color: "from-orange-500 to-red-500" },
+  { name: "NewsBreak", logo: "./src/assets/newsbreak.svg", color: "from-red-500 to-red-600" },
+  { name: "TikTok", logo: "./src/assets/tiktok.svg", color: "from-black to-cyan-500" },
+  { name: "Bigo", logo: "./src/assets/bigo.svg", color: "from-blue-500 to-purple-500" },
+  { name: "Google", logo: "./src/assets/google.svg", color: "from-blue-500 to-green-500" },
+  { name: "SmartNews", logo: "./src/assets/smartnews.svg", color: "from-orange-500 to-red-500" },
 ];
 
 const Platforms = () => {
