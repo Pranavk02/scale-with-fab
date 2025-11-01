@@ -13,7 +13,7 @@ const Platforms = () => {
     <section id="platforms" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Heading */}
+        {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
             Platforms We Cover
@@ -32,16 +32,14 @@ const Platforms = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-center">
-                {/* Gradient Circle */}
+                {/* Gradient Circle with Logo */}
                 <div
                   className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${platform.color} mb-4`}
                 >
-                  <Image
+                  <img
                     src={platform.logo}
                     alt={platform.name}
-                    width={36}
-                    height={36}
-                    className="object-contain"
+                    className="w-9 h-9 object-contain"
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">
