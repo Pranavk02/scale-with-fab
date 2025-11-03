@@ -1,6 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
 
+const Navigation = () => {
+  const handleRequestClick = () => {
+    window.open("https://forms.gle/vUEKh8VoK7uCW5Uh9", "_blank");
+  };
+  const handleTelegramChat = () => {
+    // Replace with your actual Telegram username or chat link
+    window.open("https://t.me/peezee1155", "_blank");
+  };
+
 const FinalCTA = () => {
   return (
     <section className="py-20 gradient-hero">
@@ -16,6 +25,7 @@ const FinalCTA = () => {
             <Button 
               size="lg" 
               className="gradient-accent text-accent-foreground border-0 shadow-glow hover:scale-105 transition-smooth text-lg px-8"
+              onClick={handleRequestClick},
             >
               Request Accounts
             </Button>
@@ -23,6 +33,7 @@ const FinalCTA = () => {
               size="lg" 
               variant="outline" 
               className="text-lg px-8 hover:bg-primary hover:text-primary-foreground transition-smooth"
+              onClick={handleTelegramChat},
             >
               <MessageSquare className="mr-2 h-5 w-5" />
               Talk to Team
