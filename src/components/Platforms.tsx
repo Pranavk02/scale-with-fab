@@ -1,9 +1,9 @@
 // src/components/ui/Platforms.tsx
-import newsbreak from "../../assets/newsbreak.jpg";
-import tiktok from "../../assets/tik-tok.png";
-import bigo from "../../assets/bigo.png";
-import google from "../../assets/google.png";
-import meta from "../../assets/meta.png";
+import newsbreak from "@/assets/newsbreak.jpg";
+import tiktok from "@/assets/tik-tok.png";
+import bigo from "@/assets/bigo.png";
+import google from "@/assets/google.png";
+import meta from "@/assets/meta.png";
 
 const platforms = [
   { name: "NewsBreak", color: "from-red-500 to-red-600", img: newsbreak },
