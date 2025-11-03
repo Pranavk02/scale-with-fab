@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const handleRequestClick = () => {
-    window.open("https://forms.gle/YOUR_GOOGLE_FORM_ID", "_blank");
+    window.open("https://forms.gle/vUEKh8VoK7uCW5Uh9", "_blank");
+  };
+  const handleTelegramChat = () => {
+    // Replace with your actual Telegram username or chat link
+    window.open("https://t.me/peezee1155", "_blank");
   };
   
   return (
@@ -26,7 +30,9 @@ const Navigation = () => {
           </div>
           
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden sm:inline-flex">
+            <Button variant="ghost" className="hidden sm:inline-flex"
+              onClick={handleTelegramChat}
+              >
               Talk to Team
             </Button>
             <Button className="gradient-accent text-accent-foreground border-0 shadow-glow hover:scale-105 transition-smooth"
