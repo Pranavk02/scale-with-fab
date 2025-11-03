@@ -9,7 +9,7 @@ const features = [
   {
     icon: Zap,
     title: "Available for 5 top-performing platforms",
-    description: "Access to NewsBreak, TikTok, Bigo, Google, and SmartNews"
+    description: "Access to Meta, TikTok, Google, Bigo, and NewsBreak"
   },
   {
     icon: HeadphonesIcon,
