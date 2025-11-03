@@ -1,9 +1,9 @@
 import Image from "next/image";
-import newsbreak from "../assets/newsbreak.jpg";
-import tiktok from "../assets/tik-tok.png";
-import bigo from "../assets/bigo.png";
-import google from "../assets/google.png";
-import meta from "../assets/meta.png";
+import newsbreak from "@/assets/newsbreak.jpg";
+import tiktok from "@/assets/tik-tok.png";
+import bigo from "@/assets/bigo.png";
+import google from "@/assets/google.png";
+import meta from "@/assets/meta.png";
 
 const platforms = [
   { name: "Google", color: "from-blue-500 to-green-500", image: google },
