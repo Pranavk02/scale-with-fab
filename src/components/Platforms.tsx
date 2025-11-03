@@ -1,16 +1,16 @@
-import Image from "next/image";
-import newsbreak from "@/assets/newsbreak.jpg";
-import tiktok from "@/assets/tik-tok.png";
-import bigo from "@/assets/bigo.png";
-import google from "@/assets/google.png";
-import meta from "@/assets/meta.png";
+// src/components/ui/Platforms.tsx
+import newsbreak from "../../assets/newsbreak.jpg";
+import tiktok from "../../assets/tik-tok.png";
+import bigo from "../../assets/bigo.png";
+import google from "../../assets/google.png";
+import meta from "../../assets/meta.png";
 
 const platforms = [
-  { name: "Google", color: "from-blue-500 to-green-500", image: google },
-  { name: "Meta", color: "from-indigo-500 to-blue-500", image: meta },
-  { name: "NewsBreak", color: "from-red-500 to-red-600", image: newsbreak },
-  { name: "TikTok", color: "from-black to-cyan-500", image: tiktok },
-  { name: "Bigo", color: "from-blue-500 to-purple-500", image: bigo },
+  { name: "NewsBreak", color: "from-red-500 to-red-600", img: newsbreak },
+  { name: "TikTok", color: "from-black to-cyan-500", img: tiktok },
+  { name: "Bigo", color: "from-blue-500 to-purple-500", img: bigo },
+  { name: "Google", color: "from-blue-500 to-green-500", img: google },
+  { name: "Meta", color: "from-indigo-500 to-blue-500", img: meta },
 ];
 
 const Platforms = () => {
@@ -27,27 +27,22 @@ const Platforms = () => {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-          {platforms.map((platform, index) => (
+          {platforms.map((p, index) => (
             <div
-              key={index}
+              key={p.name}
               className="bg-card rounded-xl p-8 shadow-soft hover:shadow-medium transition-smooth animate-fade-in flex items-center justify-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-center">
-                <div
-                  className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br ${platform.color} mb-4 overflow-hidden`}
-                >
-                  <Image
-                    src={platform.image}
-                    alt={platform.name}
-                    width={60}
-                    height={60}
-                    className="object-contain"
+                <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br ${p.color} mb-4 overflow-hidden`}>
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    className="w-12 h-12 object-contain"
+                    loading="lazy"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground">
-                  {platform.name}
-                </h3>
+                <h3 className="text-lg font-semibold text-foreground">{p.name}</h3>
               </div>
             </div>
           ))}
