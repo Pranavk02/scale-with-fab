@@ -7,10 +7,10 @@ const Problem = () => {
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-destructive/10 mb-6">
             <AlertCircle className="w-8 h-8 text-destructive" />
-          </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
             The Problem
           </h2>
+          </div>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Getting consistent, reliable ad accounts shouldn't be a gamble.
           </p>
