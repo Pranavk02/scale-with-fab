@@ -1,6 +1,12 @@
 import telegramQR from "@/assets/IMG_2873.jpg";
+import { Button } from "@/components/ui/button"; // make sure the path matches your setup
 
 const Footer = () => {
+  const handlePrivacyClick = () => {
+    // 🔗 Replace this with your actual Privacy Policy link
+    window.open("https://orangetrail.io/privacy-policy/", "_blank");
+  };
+
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,9 +16,19 @@ const Footer = () => {
           {/* Left: Brand Info */}
           <div>
             <h3 className="text-2xl font-bold mb-4">FabAccounts</h3>
-            <p className="text-primary-foreground/80 mb-4">
+            <p className="text-primary-foreground/80 mb-6">
               Your trusted partner for verified ad accounts across multiple platforms.
             </p>
+
+            {/* Privacy Policy Button */}
+            <Button
+              variant="outline"
+              size="sm"
+              className="text-sm border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-smooth"
+              onClick={handlePrivacyClick}
+            >
+              Privacy Policy
+            </Button>
           </div>
 
           {/* Center: Platforms */}
