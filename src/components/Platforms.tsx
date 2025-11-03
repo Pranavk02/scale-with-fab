@@ -6,11 +6,11 @@ import google from "@/assets/google.png";
 import meta from "@/assets/meta.png";
 
 const platforms = [
-  { name: "NewsBreak", color: "from-red-500 to-red-600", img: newsbreak },
-  { name: "TikTok", color: "from-black to-cyan-500", img: tiktok },
-  { name: "Bigo", color: "from-blue-500 to-purple-500", img: bigo },
-  { name: "Google", color: "from-blue-500 to-green-500", img: google },
-  { name: "Meta", color: "from-indigo-500 to-blue-500", img: meta },
+  { name: "NewsBreak", color: "from-white-500 to-white-500", img: newsbreak },
+  { name: "TikTok", color: "from-white to-white-500", img: tiktok },
+  { name: "Bigo", color: "from-white-500 to-white-500", img: bigo },
+  { name: "Google", color: "from-white-500 to-white-500", img: google },
+  { name: "Meta", color: "from-white-500 to-white-500", img: meta },
 ];
 
 const Platforms = () => {
