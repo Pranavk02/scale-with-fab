@@ -16,7 +16,7 @@ const Footer = () => {
 
             {/* Privacy Policy Link */}
             <a
-              href="https://orangetrail.io/privacy-policy/"
+              href="https://privacy-policy/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-2 text-sm font-medium text-accent bg-accent-foreground/10 px-4 py-2 rounded-md hover:bg-accent-foreground/20 transition-colors"
