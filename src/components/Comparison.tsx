@@ -3,7 +3,7 @@ import { Check, X } from "lucide-react";
 const comparisonData = [
   {
     feature: "Account Status",
-    fabaccounts: "Whitelisted & Managed",
+    fabaccounts: "Whitelisted Accounts",
     others: "Unverified or resale accounts"
   },
   {
