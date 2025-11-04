@@ -29,11 +29,11 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-center">
             <h4 className="font-semibold mb-4 text-center">Platforms</h4>
             <ul className="space-y-2 text-primary-foreground/80 text-center">
-              <li>NewsBreak</li>
-              <li>TikTok</li>
-              <li>Bigo</li>
               <li>Google</li>
-              <li>SmartNews</li>
+              <li>Meta</li>
+              <li>Tik Tok</li>
+              <li>Bigo</li>
+              <li>Newsbreak</li>
             </ul>
           </div>
 
