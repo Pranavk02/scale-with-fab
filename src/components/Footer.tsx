@@ -23,7 +23,7 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Center: Platforms */}
+          {/* Center: Platforms & Links */}
           <div className="flex flex-col items-center justify-center">
             <h4 className="font-semibold mb-4 text-center">Platforms</h4>
             <ul className="space-y-2 text-primary-foreground/80 text-center">
@@ -33,6 +33,13 @@ const Footer = () => {
               <li>Bigo</li>
               <li>Newsbreak</li>
             </ul>
+            
+            <a
+              href="/contact"
+              className="inline-block mt-6 text-sm font-medium text-accent bg-accent-foreground/10 px-4 py-2 rounded-md hover:bg-accent-foreground/20 transition-colors"
+            >
+              Contact
+            </a>
           </div>
 
           {/* Right: Telegram QR */}
