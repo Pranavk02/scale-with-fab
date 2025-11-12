@@ -1,92 +1,45 @@
-import { useEffect, useRef } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
 import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
+import worldMapImage from "@/assets/world-map-dotted.png";
 
 const offices = [
   {
     country: "United States",
     city: "New York",
     address: "123 Business Ave, NY 10001",
-    email: "usa@fabaccounts.com",
-    coordinates: [-74.006, 40.7128] as [number, number]
+    email: "usa@fabaccounts.com"
   },
   {
     country: "United Kingdom",
     city: "London",
     address: "456 Commerce St, London EC1A 1BB",
-    email: "uk@fabaccounts.com",
-    coordinates: [-0.1276, 51.5074] as [number, number]
+    email: "uk@fabaccounts.com"
   },
   {
     country: "India",
     city: "Mumbai",
     address: "789 Tech Park, Mumbai 400001",
-    email: "india@fabaccounts.com",
-    coordinates: [72.8777, 19.0760] as [number, number]
+    email: "india@fabaccounts.com"
   },
   {
     country: "United Arab Emirates",
     city: "Dubai",
     address: "321 Business Bay, Dubai",
-    email: "uae@fabaccounts.com",
-    coordinates: [55.2708, 25.2048] as [number, number]
+    email: "uae@fabaccounts.com"
   }
 ];
 
 const Contact = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-
-  useEffect(() => {
-    if (!mapContainer.current || map.current) return;
-
-    // Initialize map with a placeholder token message
-    mapboxgl.accessToken = 'YOUR_MAPBOX_TOKEN_HERE';
-    
-    try {
-      map.current = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: 'mapbox://styles/mapbox/light-v11',
-        center: [20, 30],
-        zoom: 1.5,
-      });
-
-      // Add navigation controls
-      map.current.addControl(
-        new mapboxgl.NavigationControl(),
-        'top-right'
-      );
-
-      // Add markers for each office
-      offices.forEach((office) => {
-        if (map.current) {
-          const marker = new mapboxgl.Marker({ color: 'hsl(var(--primary))' })
-            .setLngLat(office.coordinates)
-            .setPopup(
-              new mapboxgl.Popup({ offset: 25 })
-                .setHTML(`<strong>${office.city}</strong><br>${office.country}`)
-            )
-            .addTo(map.current);
-        }
-      });
-    } catch (error) {
-      console.error('Mapbox initialization error:', error);
-    }
-
-    return () => {
-      map.current?.remove();
-    };
-  }, []);
-
   const handleTelegramChat = () => {
     window.open("https://t.me/peezee1155", "_blank");
   };
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+      
       {/* Hero Section */}
       <section className="pt-32 pb-12 gradient-hero">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,16 +58,15 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-12 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
-            ref={mapContainer} 
-            className="w-full h-[500px] rounded-lg shadow-lg border border-border"
-            style={{ minHeight: '500px' }}
-          />
-          <p className="text-sm text-muted-foreground text-center mt-4">
-            Add your Mapbox token to enable the interactive map
-          </p>
+          <div className="max-w-6xl mx-auto">
+            <img 
+              src={worldMapImage} 
+              alt="Global office locations"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
         </div>
       </section>
 
